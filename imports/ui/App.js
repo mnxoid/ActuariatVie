@@ -42,6 +42,6 @@ const Stylesheet = {
     backgroundColor: '#111',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 96
+    fontSize: "10vw"
   }
 }
