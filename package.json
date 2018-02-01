@@ -2,7 +2,10 @@
   "name": "ActuariatVie",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor",
+    "build": "meteor build ../ActuariatVie_build --server localhost",
+    "sign": "cd ../ActuariatVie_build/android && ./release.sh && cd ../../ActuariatVie/",
+    "release": "npm run build && npm run sign"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.39",
