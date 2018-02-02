@@ -1,7 +1,15 @@
-# Actuariat Vie v0.1.0
+# Actuariat Vie v0.1.1
+
+## Changes in v0.0.2:
 
 Complete relaunch: React + Meteor
 
 No more React-Native because katex-react-native is a huge pain to work with.
 
-First android build up and running: to build run **meteor build ../ActuariatVie_build --server localhost**
+## Changes in v0.1.0:
+
+Android build up and running: to build run **npm run build**
+
+## Changes in v0.1.1:
+
+Fonts added, app locked in portrait mode, more dummy formulas
