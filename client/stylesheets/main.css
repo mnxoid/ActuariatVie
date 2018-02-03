@@ -1,0 +1,45 @@
+
+body, #render-target {
+  overflow: hidden;
+}
+
+.cell{
+  position:relative;
+  transition-duration: 200ms;
+  width: 28vw;
+  height: 28vw;
+  display: flex;
+  background-color: #111;
+  align-items: center;
+  justify-content: center;
+  font-size: 10vw;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.cell::after {
+  position: absolute;
+  content: '';
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cell:hover::after {
+  background: rgba(111,148,182,0.1);
+  animation: anim-effect-boris 0.3s forwards;
+}
+
+@keyframes anim-effect-boris {
+  0% {
+    transform: scale3d(0.3, 0.3, 1);
+  }
+  25%, 50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(1.2, 1.2, 1);
+  }
+}
