@@ -11,9 +11,9 @@ const data = ["l_x","d_x","D_x","N_x","S_x","C_x","M_x","R_x","_n\\ddot a_x","_n
 export default class App extends Component { 
   render() {
     return (
-      <div style={Stylesheet.container}>
+      <div className="container">
         <Header/>
-        <Grid margin='2vw' by={3} height='calc(100vh - 14vw + 1px)'>
+        <Grid by={3}>
           {
             data
               .map((x, i) => (
@@ -25,17 +25,5 @@ export default class App extends Component {
         </Grid>
       </div>
     );
-  }
-}
-
-const Stylesheet = {
-  container: {
-    display: 'flex',
-    backgroundColor: '#555',
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    color: '#eee',
-    minHeight: '100vh',
-    flexDirection: 'column'
   }
 }

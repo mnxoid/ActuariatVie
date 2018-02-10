@@ -16,53 +16,24 @@ const pad = n => (arr, empty) => {
 export default class Grid extends Component {
   render() {
     return(
-      <div style={Stylesheet.scrollWrapper(this.props.height)}>
-        <div style={Stylesheet.wrapper(this.props.margin)}>
-          {
-            this.props.children
-              .chunk(this.props.by)
-              .map(x=>pad(this.props.by)(x,<div style={x[0].props.style}></div>))
-              .map((childRow, i) => 
-                <div style={Stylesheet.row} key={i}>
-                  {
-                    childRow
-                    .map((x,j)=>React.cloneElement(x, {
-                      style: Stylesheet.elem(this.props.margin),
-                      key: j
-                    }))
-                  }
-                </div>
-              )
-          }
-        </div>
+      <div className="grid-wrapper">
+        {
+          this.props.children
+            .chunk(this.props.by)
+            .map(x=>pad(this.props.by)(x,<div style={x[0].props.style}></div>))
+            .map((childRow, i) => 
+              <div className="row" key={i}>
+                {
+                  childRow
+                  .map((x,j)=>React.cloneElement(x, {
+                    key: j
+                  }))
+                }
+              </div>
+            )
+        }
+        <div className="cell-tools cell-tools-inactive">x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/>x=... etc<br/></div>
       </div>
     )
   }
-}
-
-const Stylesheet = {
-  scrollWrapper: height => ({
-    flex:1,
-    display: 'flex',
-    alignItems: 'stretch',
-    overflowY: 'scroll',
-    height: height
-  }),
-  wrapper: margin => ({
-    flex:1,
-    alignItems: 'stretch',
-    justifyContent: 'space-evenly',
-    flexDirection: 'column',
-    padding: margin,
-  }),
-  row: {
-    flex:1,
-    display: 'flex',
-    alignItems: 'stretch',
-    justifyContent: 'space-evenly',
-    flexDirection: 'row',
-  },
-  elem: margin => ({
-    margin: margin
-  })
 }

@@ -14,6 +14,16 @@ body, #render-target {
   justify-content: center;
   font-size: 10vw;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin: 2vw;
+}
+
+.cell-active{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 50vw;
+  font-size: 25vw;
+  margin: 0;
 }
 
 .cell::after {
@@ -42,4 +52,68 @@ body, #render-target {
     opacity: 0;
     transform: scale3d(1.2, 1.2, 1);
   }
+}
+
+.container {
+  display: flex;
+  background-color: rgb(85, 85, 85);
+  align-items: stretch;
+  justify-content: center;
+  color: rgb(238, 238, 238);
+  height: 100.5vh;
+  flex-direction: column;
+}
+
+.header {
+  line-height: 10vh;
+  text-align: center;
+  font-size: 5vh;
+  height: 10vh;
+  background-color: rgb(8, 8, 8);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: height 1000ms;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.grid-wrapper {
+  flex: 1 1 0%;
+  flex-direction: column;
+  padding: 2vw;
+  overflow-y: scroll;
+}
+
+.row {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.cell-tools {
+  position: absolute;
+  top: 50vw;
+  font-size: 10vw;
+  text-align: left;
+  justify-content: left;
+  width: 90vw;
+  padding: 5vw;
+}
+
+.cell-tools-inactive {
+  top:-200vh;
+}
+
+.header {
+  text-align: center;
+  background-color: rgb(8, 8, 8);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: height 1000ms;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }

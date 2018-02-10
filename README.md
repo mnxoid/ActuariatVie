@@ -17,3 +17,7 @@ Fonts added, app locked in portrait mode, more dummy formulas
 ## Changes in v0.1.2:
 
 Header added, prettier UI
+
+## Changes in v0.1.3:
+
+Styles tidied, everything ready for new stage
