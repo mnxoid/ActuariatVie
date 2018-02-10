@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Grid from './Grid.js';
 import Header from './Header.js'
-import {Tex} from 'react-tex';
+import Cell from './Cell.js'
 
 const seq = n => Array(n).fill(1).map((x, y) => x + y)
 
@@ -17,9 +17,7 @@ export default class App extends Component {
           {
             data
               .map((x, i) => (
-                <div className="cell" key={i}>
-                  <Tex texContent={x}/>
-                </div>
+                <Cell key={i} formula={x} />
               ))
           }
         </Grid>

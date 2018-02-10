@@ -21,3 +21,7 @@ Header added, prettier UI
 ## Changes in v0.1.3:
 
 Styles tidied, everything ready for new stage
+
+## Changes in v0.2.0:
+
+Cell animation added
