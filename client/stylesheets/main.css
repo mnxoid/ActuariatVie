@@ -18,13 +18,22 @@ body, #render-target {
   margin: 2vw;
 }
 
+.cell-empty{
+  z-index: 1;
+  position:relative;
+  width: 28vw;
+  height: 28vw;
+  display: flex;
+  margin: 2vw;
+}
+
 .cell-active{
   z-index:2;
   position: absolute;
   top: 0 !important;
   left: 0 !important;
   width: 100vw;
-  height: 50vw;
+  height: 25vh;
   font-size: 25vw;
   margin: 0;
 }
@@ -98,12 +107,18 @@ body, #render-target {
 
 .cell-tools {
   position: absolute;
-  top: 50vw;
+  top: 23vh;
   font-size: 10vw;
   text-align: left;
   justify-content: left;
   width: 90vw;
   padding: 5vw;
+  transition-duration: 200ms;
+  z-index: 1;
+  background: #333;
+  left: 0;
+  height: 75vh;
+  overflow-y: scroll;
 }
 
 .cell-tools-inactive {

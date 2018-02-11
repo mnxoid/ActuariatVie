@@ -13,7 +13,8 @@ App.info({
 //   'android_xxxhdpi': 'icons/icon_xxxhdpi.png'
 //   // More screen sizes and platforms...
 // });
-App.setPreference("orientation", "portrait");
+App.setPreference('orientation', 'portrait');
+App.setPreference('BackgroundColor', '0xff41c569');
 // App.launchScreens({
 //   'iphone': path,
 //   'iphone_2x': path,

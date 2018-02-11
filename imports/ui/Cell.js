@@ -7,6 +7,7 @@ export default class Cell extends Component {
     this.state = {open: false, classes: "cell", style: {}}
   }
   click() {
+    //let parent know we're open
     if(!this.state.open){
       this.setState((state,props) => ({
         open: true, 
@@ -19,11 +20,13 @@ export default class Cell extends Component {
         dirty: true,
         oldpos: this.refs.cell.getBoundingClientRect()
       }))
+      this.props.toolsCallback(this)
     } else {
       this.close() //debug only : this should not be on click
     }
   }
   close(){
+    // let parent know we're closed
     this.setState((state,props) => ({
       open: false, 
       classes: "cell", 
