@@ -198,29 +198,7 @@ const Formulas = [
       return 1
     },
     differeApplicable: true,
-  },
-  {
-    cellFormula: "\\Pi", 
-    args: [],
-    longFormula: ({x, table}) => {
-      return ``
-    },
-    value: ({x, table}) => {
-      return 1
-    },
-    differeApplicable: true,
-  },
-  {
-    cellFormula: "P", 
-    args: [],
-    longFormula: ({x, table}) => {
-      return ``
-    },
-    value: ({x, table}) => {
-      return 1
-    },
-    differeApplicable: true,
-  },
+  }
 ]
 
 export default Formulas
